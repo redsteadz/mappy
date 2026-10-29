@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mappy import</title>
+    <style>
+      :root { --bg: #ffffff; --text: #1c2026; --muted: #646c78; --border: #e1e4ea; --accent: #4f5bd5; }
+      [data-theme="dark"] { --bg: #18191d; --text: #e6e8eb; --muted: #9aa2ad; --border: #2e333b; --accent: #8790ff; }
+      body { margin: 0; padding: 16px; font: 13px/1.45 system-ui, sans-serif; background: var(--bg); color: var(--text); }
+      h1 { font-size: 15px; margin: 0 0 4px; }
+      p { color: var(--muted); margin: 0 0 12px; }
+      .box { border: 1px dashed var(--border); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+      button, select { width: 100%; height: 32px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font: inherit; margin-top: 6px; }
+      button.primary { background: var(--accent); border-color: var(--accent); color: #fff; cursor: pointer; }
+      button:disabled { opacity: 0.5; }
+      #status { white-space: pre-wrap; min-height: 40px; }
+      label { font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <h1>Import a Mappy map</h1>
+    <p>Builds one board per screen with editable layers, a hidden reference screenshot, prototype links and flow arrows.</p>
+    <div class="box">
+      <label for="file">From a file</label>
+      <input id="file" type="file" accept=".zip,.mappy.zip,application/zip" style="margin-top: 6px; width: 100%" />
+    </div>
+    <div class="box">
+      <label for="project">From the running Mappy app</label>
+      <select id="project"><option value="">Loading crawls…</option></select>
+      <button id="fetch" class="primary" disabled>Import selected crawl</button>
+    </div>
+    <div id="status"></div>
+    <script type="module" src="ui.js"></script>
+  </body>
+</html>

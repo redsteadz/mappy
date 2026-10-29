@@ -1,0 +1,7 @@
+{
+  "name": "Mappy import",
+  "description": "Import Android app screen maps captured by Mappy: editable screens, prototype links and the flow.",
+  "code": "plugin.js",
+  "icon": "icon.png",
+  "permissions": ["content:read", "content:write"]
+}

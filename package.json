@@ -1,0 +1,27 @@
+{
+  "name": "mappy",
+  "private": true,
+  "type": "module",
+  "description": "Crawl an Android app's UI, map its screens and flows, and export them to Figma, Penpot and other design tools.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "bin": {
+    "mappy": "packages/server/src/cli.ts"
+  },
+  "scripts": {
+    "mappy": "node packages/server/src/cli.ts",
+    "dev:web": "npm run dev -w @mappy/web",
+    "build": "npm run build -w @mappy/web && npm run build -w @mappy/penpot-plugin && npm run build -w @mappy/figma-plugin",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

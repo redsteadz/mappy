@@ -1,0 +1,16 @@
+{
+  "name": "@mappy/figma-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.ts"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.142.0",
+    "@mappy/engine": "*",
+    "@mappy/shared": "*",
+    "esbuild": "^0.28.2",
+    "fflate": "^0.8.3"
+  }
+}
